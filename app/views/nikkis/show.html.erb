@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ID:</strong>
+  <%= @nikki.id %>
+</p>
+
+<p>
+  <strong>タイトル:</strong>
+  <%= @nikki.title %>
+</p>
+<p>
+  <strong>本文:</strong>
+  <%= @nikki.body %>
+</p>
+<p>
+  <strong>登録日時:</strong>
+  <%= @nikki.created_at %>
+</p>
+<p>
+  <strong>更新日時:</strong>
+  <%= @nikki.updated_at %>
+</p>
+
+<%= link_to '編集', edit_nikki_path(@nikki) %> |
+<%= link_to '削除', @nikki, method: :delete, data: { confirm: '本当に削除しますか？'} %> |
+<%= link_to '一覧に戻る', nikkis_path %>
